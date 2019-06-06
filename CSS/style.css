@@ -1,0 +1,471 @@
+body {
+	margin: 0px;
+}
+header {
+	position: relative;
+	background-color: white;
+}
+
+#dot {
+	top: -100px;
+	position: relative;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	animation: slideDownDot 1s ease-out 1.8s forwards;
+
+}
+
+.firstHeader {
+	margin-left: 50px;
+}
+
+h1 {
+	top:-100px;
+	font-size: 3.2rem;
+	font-family: 'Michroma', sans-serif;
+	display: inline-block;
+	position: relative;
+	color: #8C856B;
+	margin-bottom: 0px;
+	padding: 10px;
+	animation: slideDownHeader 1s ease-out 1.8s forwards;
+}
+
+/*Start of Animation for Name*/
+
+@keyframes slideDownHeader {
+	from {top: -100px;}
+	to {top:-2px;}
+}
+
+@keyframes slideDownDot {
+	from {top: -100px;}
+	to {top:-10px;}
+}
+/*End of Animation for Name*/
+
+
+
+.fas {
+	float: right;
+	position: relative;
+	visibility: hidden;
+	top:10px;
+	font-size: 60px;
+	color: #F2AF57;
+	cursor: pointer;
+	animation: appear 1s ease-in 1.8s forwards;
+}
+/*Start of Animation for bars*/
+@keyframes appear {
+	from {visibility: hidden;}
+	to {visibility: visible;}
+}
+/*End of Animation for bars*/
+
+#hollow {
+  height: 450px;
+   left: 50%;
+   margin-top: 150px;
+   margin-left: -263px;
+   position: absolute;
+   top: 50%;
+   width: 450px;
+   transition: transform ease-in 1s;
+   animation: hollow 1.2s ease-in 1 forwards, slideHollow 0.6s ease-in 1.2s forwards;
+}
+
+#filled {
+	height: 170px;
+   left: 50%;
+   margin-top: 300px;
+   margin-left: -125px;
+   position: absolute;
+   top: 50%;
+   width: 170px;
+   transition: transform ease-in 1s;
+   animation: filled 1.2s ease-in 1 forwards, slideFilled 0.6s ease-in 1.2s forwards;
+}
+/* Start of Animation for the logo */
+@keyframes hollow {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(-360deg);}
+}
+
+@keyframes filled {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(360deg);}
+}
+
+@keyframes slideHollow {
+	from {transform: scale(1); top: 50%; left: 50%;}
+	to {transform: scale(0.13); top: -335px; left: 71px;}
+}
+
+@keyframes slideFilled {
+	from {transform: scale(1); top: 50%; left: 50%;}
+	to {transform: scale(0.13); top: -345px; left: 73px;}
+}
+
+/* End of Animation Animation for the logo */
+
+/* Start of style  for the sidebar */
+.sidenav {
+  width: 50px;
+  position: fixed;
+  z-index: 1;
+  top: 300px;
+  left: -200px;
+  background: none;
+  overflow: hidden;
+  animation: slideLeftSidebar 1s ease-in 1.8s forwards;
+}
+
+.sidenav a {
+	text-decoration: none;
+}
+
+
+@media screen and (max-width: 1300px) {
+  .sidenav {visibility: hidden;}
+}
+
+@keyframes slideLeftSidebar {
+	from {left: -200px;}
+	to {left:50px;}
+}
+
+.icon {
+	display: block;
+	padding: 5.5px;
+	font-size: 45px;
+	color: #F2AF57;
+	transition: transform 0.5s;
+}
+
+.icon:hover {
+	transform: scale(1.3);
+}
+/* End of style  for the sidebar */
+
+
+
+/*Style for Navbar*/
+.overlay {
+
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  opacity: 0.985;
+  background-color: #D99D4E;
+  background-color: #D99D4E;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #F4D0A1;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+.copyright {
+	background-color: #e6e6e6;
+}
+
+.copyright h2 {
+	padding: 20px 0px 0px 0px;
+}
+/*End of Style for Navbar*/
+
+.bigImage {
+	width: 450px;
+	height: 250px;
+	border: solid white 5px;
+	float: right;
+	margin: 65px 0px 0px 10px;
+}
+
+button {
+	position: relative;
+	left: 540px;
+	background-color: black;
+	padding: 10px;
+	color: white;
+	border-radius: 5px;
+	margin: 0px 0px 10px 0px;
+}
+
+button:hover {
+	background-color: #4d4d4d;
+}
+
+.container {
+	background-color: white;
+}
+
+.content {
+	background-color: #b30000;
+	color: white;
+}
+
+.content h3 {
+	padding: 10px 0px;
+}
+
+.right-border {
+	border-right: solid white 1px;
+}
+
+.smallImage {
+	display: block;
+	width: 150px;
+	height: 150px;
+	border: solid white 3px;
+	margin: 10px auto;
+}
+
+
+/*Start of Animation for Texts*/
+
+@keyframes slideRight {
+	from {left: -2500px;}
+	to {left:0px;}
+}
+
+@keyframes slideLeft {
+	from {right: -2500px;}
+	to {right:0px;}
+}
+/*End of Animation for Texts*/
+
+
+h2, h3 {
+	font-family: 'Paytone One', sans-serif;
+	right: -2500px;
+	position: relative;
+	animation: slideLeft 1s ease-in 1.8s forwards;
+	color: #735329;
+}
+
+p {
+
+	left: -2500px;
+	position: relative;
+	animation: slideRight 1s ease-in 1.8s forwards;
+	font-family: 'Raleway', sans-serif;
+	color: #735329;
+}
+
+#about,#goals h2,h3 {
+	font-size: 40px;
+}
+
+#about, #goals p {
+	font-size: 20px;
+}
+
+footer {
+	position: relative;
+	bottom: -2000px;
+	background-color: #8C856B;
+	text-align: center;
+	animation: slideUp 1s linear 1.8s forwards;
+}
+
+footer p {
+	margin-bottom: 0px;
+	color: #FBF1DD;
+	float: right;
+	line-height: 2;
+}
+
+footer p:first-of-type {
+	width: 360px;
+}
+
+footer p:last-of-type {
+	width: 250px;
+}
+
+/*Start of animation for Footer*/
+
+@keyframes slideUp {
+	from {bottom: -2000px;}
+	to {bottom: 0px;}
+}
+
+
+
+.bottomnav {
+	display: flex;
+	visibility: hidden;
+	position: relative;
+	bottom: 0px;
+
+}
+
+
+.bottomnav a {
+	text-decoration: none;
+}
+.iconBottom {
+	display: inline-block;
+	text-decoration: none;
+	display: block;
+	padding: 10px;
+	font-size: 45px;
+	color: #F2AF57;
+	transition: transform 0.5s;
+}
+
+.iconBottom:hover {
+	transform: scale(1.3);
+}
+
+
+
+@media screen and (max-width: 1300px) {
+  .bottomnav {visibility: visible;}
+}
+
+
+
+
+#about img {
+	position: relative;
+	float: left;
+	border-radius: 15px;
+	width: 170px;
+	height: 230px;
+	left: -2000px;
+	margin: 17px 10px 0px 0px;
+	animation: slideRight 1s ease-in 1.8s forwards;
+}
+
+#goals img {
+	position: relative;
+	float: right;
+	border-radius: 15px;
+	width: 230px;
+	height: 260px;
+	right: -2000px;
+	margin: 17px 10px 0px 0px;
+	animation: slideLeft 1s ease-in 1.8s forwards;
+}
+
+.row {
+	text-align: center;
+}
+
+.row p {
+	padding: 10px 0px;
+}
+ 
+
+.col-xl-6 img {
+	margin: 1px auto;
+	display: block;
+	position: relative;
+	border-radius: 15px;
+	width: 220px;
+	height: 140px;
+	left: -2000px;
+	animation: slideRight 1s ease-in 1.8s forwards;
+}
+
+.col-xl-4 img {
+	margin: 1px auto;
+	display: block;
+	position: relative;
+	border-radius: 15px;
+	width: 210px;
+	height: 120px;
+	right: -2000px;
+	animation: slideLeft 1s ease-in 1.8s forwards;
+}
+
+h6 {
+	color: #8C856B;
+	position: relative;
+	right: -2000px;
+	animation: slideLeft 1s ease-in 1.8s forwards;
+}
+
+.link {
+	text-decoration: none;
+	color: #F2AF57;
+	transition: transform 0.8s;
+}
+
+.link:hover {
+	transform: scale(2);
+	color:#F2AF57;
+	text-decoration: none;
+}
+
+.link:active {
+	color: white;
+}
+
+.first {
+	opacity: 0;
+	animation: img 1s ease-in forwards;
+
+}
+
+@keyframes img {
+    0%   {opacity:0.0; }
+    50%  {opacity:0.5; }
+    100% {opacity:1.0; }
+}
+.d-block {
+	position: relative;
+	width: 100%;
+	height: 500px;
+	
+}
+
+.projectIMG {
+	position: relative;
+	width: 100%;
+	height: 500px;
+	left: -3000px;
+	animation: slideRight 1s ease-in 1.8s forwards;
+}
